@@ -96,9 +96,9 @@ textarea {
    ========================================================================== */
 
 html {
-  background-color: #fff;
   height: 100%;
-  width: 100%;
+  background-size: cover;
+  background: url(../img/bkgd4.jpg) no-repeat center center fixed;
 }
 
 body {
@@ -107,22 +107,38 @@ body {
   font-size: 1.25em;
   height: 100%;
   color: #fff;
+  justify-content: center;
+ }
+
+ span {
+     color: #fbf84b;
+     font-weight: 700;
+    
+ }
+ main p span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5em;
+  }
+
+header  {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
 }
 
 header,
 footer {
-  background-color: #222;
-  height: 80px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    height: 250px;
+    
 }
 
 main {
-  background-color: #ccc;
+ 
   height: 250px;
   width: 100%;
+ 
 
 }
 
@@ -132,28 +148,37 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .flex-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
+    max-width: 1600px;
 }
 
 .flex-items {
-  color: #fff;
-  line-height: 1.5em;
-  font-size: 1.6em;
-  background-color: #f16059;
+  line-height: 1em;
+  font-size: 1em;
+  background: #222;
+  background:rgba(44, 39, 39, 0.219); 
   width: 30%;
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-bottom: none;
+  
 }
 
+footer {
+    border-top: 1px solid rgb(206, 210, 211);
+  }
+  
+  footer i {
+    padding: 30px 20px 0 0;
+  }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -235,14 +260,28 @@ main {
    ========================================================================== */
 
 /* If you'd like to try a different layout on Desktop and larger screens: */
+@media all and (max-width:768px) {
+    body {
+        padding: 1em;
+    }
+}
 @media (min-width: 1200px) {
-  #div-1,
-  #div-2{
+    .flex-items {
+        flex-basis: 32%;
+        border-bottom: none;
+    }
+  
+  #div-2 p {
       /* set your flex value to 1 50% */
+      border-left: 1px solid #555;
+      border-right: 1px solid #555;
+      padding: 0 40px;
+      border-bottom: none;
   }
 
   #div-3 {
     /* set your flex value to 1 100% */
+   
   }
 }
 
